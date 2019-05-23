@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 2.80.55 commit date:2019-04-09, commit time:18:12, hash:009dbc2bc9fb</authoring_tool>
+    </contributor>
+    <created>2019-05-23T09:34:00</created>
+    <modified>2019-05-23T09:34:00</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="COLMAT-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <lambert>
+            <diffuse>
+              <color sid="diffuse">0.8 0.8 0.8 1</color>
+            </diffuse>
+            <reflectivity>
+              <float sid="specular">0.5</float>
+            </reflectivity>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_images/>
+  <library_materials>
+    <material id="COLMAT-material" name="COLMAT">
+      <instance_effect url="#COLMAT-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="Plane_005-mesh" name="Plane.005">
+      <mesh>
+        <source id="Plane_005-mesh-positions">
+          <float_array id="Plane_005-mesh-positions-array" count="21">-0.9173554 -0.9173554 0 -0.9173554 0.9173554 0 -1.097643 0.2941124 -1.818182 -1.097643 -0.2941126 -1.818182 -0.8035302 -0.8035303 -1.818182 -0.8264463 -0.8264463 0 -0.8264463 0.8264463 0</float_array>
+          <technique_common>
+            <accessor source="#Plane_005-mesh-positions-array" count="7" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Plane_005-mesh-normals">
+          <float_array id="Plane_005-mesh-normals-array" count="27">0.943395 0.2527822 -0.2147254 0.9999207 0 0.0126028 0.7071069 -0.7071067 1.27494e-7 -0.8628758 -0.4981819 -0.0852074 -0.9951198 0 0.09867417 -0.9951198 0 0.09867423 0.6749202 0.6749184 -0.2982751 0 0 1 0 0 -1</float_array>
+          <technique_common>
+            <accessor source="#Plane_005-mesh-normals-array" count="9" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Plane_005-mesh-vertices">
+          <input semantic="POSITION" source="#Plane_005-mesh-positions"/>
+        </vertices>
+        <triangles material="COLMAT-material" count="10">
+          <input semantic="VERTEX" source="#Plane_005-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Plane_005-mesh-normals" offset="1"/>
+          <p>6 0 4 0 2 0 6 1 5 1 4 1 4 2 5 2 0 2 4 3 0 3 3 3 0 4 1 4 3 4 3 5 1 5 2 5 2 6 1 6 6 6 5 7 1 7 0 7 3 8 2 8 4 8 5 7 6 7 1 7</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="ColL" name="ColL" type="NODE">
+        <matrix sid="transform">1.1 0 0 0 0 1.1 0 0 0 0 1.1 1 0 0 0 1</matrix>
+        <instance_geometry url="#Plane_005-mesh" name="ColL">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="COLMAT-material" target="#COLMAT-material"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>
