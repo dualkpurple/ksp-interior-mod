@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 2.80.55 commit date:2019-04-09, commit time:18:12, hash:009dbc2bc9fb</authoring_tool>
+    </contributor>
+    <created>2019-06-01T13:18:45</created>
+    <modified>2019-06-01T13:18:45</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="Material-effect">
+      <profile_COMMON>
+        <newparam sid="Material_002_Base_Color-surface">
+          <surface type="2D">
+            <init_from>Material_002_Base_Color</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Material_002_Base_Color-sampler">
+          <sampler2D>
+            <source>Material_002_Base_Color-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <diffuse>
+              <texture texture="Material_002_Base_Color-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <reflectivity>
+              <float sid="specular">0.5</float>
+            </reflectivity>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_images>
+    <image id="Material_002_Base_Color" name="Material_002_Base_Color">
+      <init_from>Material.002%20Base%20Color.png</init_from>
+    </image>
+  </library_images>
+  <library_materials>
+    <material id="Material-material" name="Material">
+      <instance_effect url="#Material-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="Plane_010-mesh" name="Plane.010">
+      <mesh>
+        <source id="Plane_010-mesh-positions">
+          <float_array id="Plane_010-mesh-positions-array" count="60">-0.158723 0.3145382 -0.01527178 -0.1551733 0.3029973 -0.01527178 -0.1450648 0.2932133 -0.01527178 -0.1299363 0.2866759 -0.01527178 -0.1120909 0.2843803 -0.01527178 0.1120909 0.2843802 -0.01527178 0.1299362 0.2866758 -0.01527178 0.145065 0.2932133 -0.01527178 0.1551734 0.3029972 -0.01527178 0.1587231 0.3145382 -0.01527178 0.1587231 0.4595215 -0.01527178 0.1551734 0.4710626 -0.01527178 0.145065 0.4808465 -0.01527178 0.1299362 0.487384 -0.01527178 0.1120909 0.4896796 -0.01527178 -0.1120909 0.4896796 -0.01527178 -0.1299362 0.487384 -0.01527178 -0.1450648 0.4808465 -0.01527178 -0.1551734 0.4710626 -0.01527178 -0.1587231 0.4595214 -0.01527178</float_array>
+          <technique_common>
+            <accessor source="#Plane_010-mesh-positions-array" count="20" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Plane_010-mesh-normals">
+          <float_array id="Plane_010-mesh-normals-array" count="21">0 0 -1 -1.3501e-7 0 -1 0 0 -1 2.49464e-7 0 -1 -2.49465e-7 0 -1 1.35011e-7 0 -1 -2.4947e-7 0 -1</float_array>
+          <technique_common>
+            <accessor source="#Plane_010-mesh-normals-array" count="7" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Plane_010-mesh-map-0">
+          <float_array id="Plane_010-mesh-map-0-array" count="108">0.4825968 0.8558667 0.4825967 0.9154879 0.5037435 0.843465 0.4825967 0.9154879 0.4842066 0.9202342 0.4887905 0.9242575 0.4887905 0.9242575 0.495651 0.9269459 0.4825967 0.9154879 0.495651 0.9269459 0.5037434 0.92789 0.4825967 0.9154879 0.5037434 0.92789 0.6054052 0.92789 0.6054051 0.8434649 0.6054052 0.92789 0.6134977 0.9269458 0.6265518 0.9154882 0.6054051 0.8434649 0.6054052 0.92789 0.626552 0.8558667 0.6134977 0.9269458 0.6203582 0.9242574 0.6265518 0.9154882 0.6203582 0.9242574 0.6249422 0.9202342 0.6265518 0.9154882 0.6265518 0.9154882 0.626552 0.8558667 0.6054052 0.92789 0.626552 0.8558667 0.6249422 0.8511208 0.6203582 0.8470973 0.6203582 0.8470973 0.6134977 0.8444089 0.626552 0.8558667 0.6134977 0.8444089 0.6054051 0.8434649 0.626552 0.8558667 0.6054051 0.8434649 0.5037435 0.843465 0.5037434 0.92789 0.5037435 0.843465 0.495651 0.844409 0.4825968 0.8558667 0.5037434 0.92789 0.5037435 0.843465 0.4825967 0.9154879 0.495651 0.844409 0.4887903 0.8470974 0.4825968 0.8558667 0.4887903 0.8470974 0.4842066 0.8511208 0.4825968 0.8558667</float_array>
+          <technique_common>
+            <accessor source="#Plane_010-mesh-map-0-array" count="54" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Plane_010-mesh-vertices">
+          <input semantic="POSITION" source="#Plane_010-mesh-positions"/>
+        </vertices>
+        <triangles material="Material-material" count="18">
+          <input semantic="VERTEX" source="#Plane_010-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Plane_010-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Plane_010-mesh-map-0" offset="2" set="0"/>
+          <p>0 0 0 19 0 1 4 0 2 19 0 3 18 0 4 17 0 5 17 0 6 16 0 7 19 0 8 16 1 9 15 1 10 19 1 11 15 0 12 14 0 13 5 0 14 14 0 15 13 0 16 10 0 17 5 2 18 14 2 19 9 2 20 13 3 21 12 3 22 10 3 23 12 0 24 11 0 25 10 0 26 10 0 27 9 0 28 14 0 29 9 0 30 8 0 31 7 0 32 7 4 33 6 4 34 9 4 35 6 0 36 5 0 37 9 0 38 5 0 39 4 0 40 15 0 41 4 5 42 3 5 43 0 5 44 15 0 45 4 0 46 19 0 47 3 6 48 2 6 49 0 6 50 2 0 51 1 0 52 0 0 53</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_animations>
+    <animation id="action_container-Door-Glass_001" name="Door-Glass.001"/>
+  </library_animations>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="Door-Glass_001" name="Door-Glass.001" type="NODE">
+        <matrix sid="transform">0.6583694 0 -3.48817e-8 0.06583679 0 1 0 0.004759019 1.3411e-7 0 0.5 1.662822 0 0 0 1</matrix>
+        <instance_geometry url="#Plane_010-mesh" name="Door-Glass.001">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Material-material" target="#Material-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>
